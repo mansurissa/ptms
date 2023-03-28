@@ -1,4 +1,4 @@
-<?php  
+<?php
 session_start();
 error_reporting(0);
 include('includes/dbconnection.php');
@@ -40,7 +40,7 @@ if (strlen($_SESSION['ptmsaid']==0)) {
 </head>
 
 <body>
-    
+
     <!-- page container area start -->
     <div class="page-container">
         <!-- sidebar menu area start -->
@@ -66,7 +66,7 @@ $fdate=$_POST['fromdate'];
 $tdate=$_POST['todate'];
 
 ?>
-<h5 align="center" style="color:blue">Between Dates Report  from <?php echo $fdate?> to <?php echo $tdate?> of Ticket Generating</h5>
+<h5 align="center" style="color:black">Foreigners ickets generated:  from <span style="color:#ffd70d"> <?php echo $fdate?> </span> to  <span style="color:#ffd70d"><?php echo $tdate?> </span></h5>
                                 <div class="data-tables">
                                    <table class="table text-center">
                                         <thead class="bg-light text-capitalize">
@@ -86,12 +86,12 @@ while ($row=mysqli_fetch_array($ret)) {
                                         <tbody>
           <tr data-expanded="true">
             <td><?php echo $cnt;?></td>
-              
+
                   <td><?php  echo $row['TicketID'];?></td>
                   <td><?php  echo $row['PostingDate'];?></td>
                   <td><a href="manage-foreigners-ticket.php?viewid=<?php echo $row['ID'];?>">View</a>
                 </tr>
-                <?php 
+                <?php
 $cnt=$cnt+1;
 }?>
  </tbody>
@@ -101,8 +101,8 @@ $cnt=$cnt+1;
                         </div>
                     </div>
                     <!-- data table end -->
-                   
-                    
+
+
                 </div>
             </div>
         </div>
@@ -112,8 +112,8 @@ $cnt=$cnt+1;
         <!-- footer area end-->
     </div>
     <!-- page container area end -->
-    
-    
+
+
     <!-- jquery latest version -->
     <script src="assets/js/vendor/jquery-2.2.4.min.js"></script>
     <!-- bootstrap 4 js -->

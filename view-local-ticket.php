@@ -1,12 +1,14 @@
 <?php
 session_start();
-error_reporting(0);
 include('includes/dbconnection.php');
+error_reporting(0);
 if (strlen($_SESSION['ptmsaid']==0)) {
   header('location:logout.php');
   } else{
-    
-?>
+
+
+
+  ?>
 
 <!doctype html>
 <html class="no-js" lang="en">
@@ -14,7 +16,7 @@ if (strlen($_SESSION['ptmsaid']==0)) {
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Between Dates Report of Ticket Generating - Park Ticket Management System</title>
+    <title>View Indian Ticket - Park Ticket Management System</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" type="image/png" href="assets/images/icon/favicon.ico">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -32,11 +34,11 @@ if (strlen($_SESSION['ptmsaid']==0)) {
     <link rel="stylesheet" href="assets/css/responsive.css">
     <!-- modernizr css -->
     <script src="assets/js/vendor/modernizr-2.8.3.min.js"></script>
-    
+
 </head>
 
 <body>
-    
+
     <!-- page container area start -->
     <div class="page-container">
         <!-- sidebar menu area start -->
@@ -53,34 +55,58 @@ if (strlen($_SESSION['ptmsaid']==0)) {
             <div class="main-content-inner">
                 <div class="row">
 
-                    <div class="col-lg-6 col-ml-12">
+                    <div class="col-lg-8 col-ml-12">
                         <div class="row">
                             <!-- basic form start -->
                             <div class="col-12 mt-5">
                                 <div class="card">
-                                    <div class="card-body">
-                                        <h4 class="header-title" style="color: blue">Between Dates Reports of Ticket Generating</h4>
+                                    <div class="card-body" id="exampl">
+                                        <?php
+ $vid=$_GET['viewid'];
+$ret=mysqli_query($con,"select * from tblticlocal where ID='$vid'");
+$cnt=1;
+while ($row=mysqli_fetch_array($ret)) {
+
+?>
+                                        <h4 class="header-title" style="color: #ffd70d">View Detail of Ticket ID: <?php  echo $row['TicketID'];?></h4>
+                                        <h5 class="header-title" style="color: #ffd70d">Visiting Date: <?php  echo $row['PostingDate'];?></h5>
 
 
-                                        <form method="post" name="bwdatesreport" action="normal-bwdates-reports-details.php">
-                                             <div class="form-group">
-                                                <label>From Date</label>
-                                                <input type="date" id="fromdate" name="fromdate" value="" class="form-control" required="true"></div>
-                                            
-                                         <div class="form-group">
-                                                <label>To Date</label>
-                                               <input type="date" id="todate" name="todate" value="" class="form-control" required="true">
-                                                
-                                            </div>
-                                          
-                                            <button type="submit" class="btn btn-primary mt-4 pr-4 pl-4" name="submit">Submit</button>
-                                        </form>
+                                        <table border="1" class="table table-striped table-bordered first" >
+                                            <tr>
+                                                <th>#</th>
+                                                <th>No of Tickets</th>
+                                                <th>Price per unit</th>
+                                                <th>Total</th>
+                                            </tr>
+                                <tr>
+                                    <th >Number of Adult </th>
+                                    <td style="padding-left: 10px"><?php  echo $noadult=$row['NoAdult'];?></td>
+                                     <td style="padding-left: 10px">$<?php  echo $cup=$row['AdultUnitprice'];?></td>
+                                     <td style="padding-left: 10px">$<?php  echo $ta=$cup*$noadult;?></td>
+                                </tr>
+                                <tr>
+                                    <th>Number of Chlidren </th>
+                                    <td style="padding-left: 10px"><?php  echo $nochild=$row['NoChildren'];?></td>
+                                    <td style="padding-left: 10px">$<?php  echo $aup=$row['ChildUnitprice'];?></td>
+                                     <td style="padding-left: 10px">$<?php  echo $tc=$aup*$nochild;?></td>
+                                </tr>
+
+                                 <tr>
+                                    <th style="text-align: center;color: #ffd70d;font-size: 20px" colspan="3">Total Ticket Price</th>
+                                    <td style="padding-left: 10px;">$<?php  echo ($ta+$tc);?></td>
+                                </tr>
+                                </table>
                                     </div>
+                                    <?php } ?>
+                                     <p style="margin-top:1%"  align="center">
+  <i class="fa fa-print fa-2x" style="cursor: pointer;"  OnClick="CallPrint(this.value)" ></i>
+</p>
                                 </div>
                             </div>
                             <!-- basic form end -->
-                         
-                            
+
+
                         </div>
                     </div>
                 </div>
@@ -93,7 +119,7 @@ if (strlen($_SESSION['ptmsaid']==0)) {
     </div>
     <!-- page container area end -->
     <!-- offset area start -->
-    
+
     <!-- jquery latest version -->
     <script src="assets/js/vendor/jquery-2.2.4.min.js"></script>
     <!-- bootstrap 4 js -->
@@ -107,6 +133,20 @@ if (strlen($_SESSION['ptmsaid']==0)) {
     <!-- others plugins -->
     <script src="assets/js/plugins.js"></script>
     <script src="assets/js/scripts.js"></script>
+
+     <script>
+function CallPrint(strid) {
+var prtContent = document.getElementById("exampl");
+var WinPrint = window.open('', '', 'left=0,top=0,width=800,height=900,toolbar=0,scrollbars=0,status=0');
+WinPrint.document.write(prtContent.innerHTML);
+WinPrint.document.close();
+WinPrint.focus();
+WinPrint.print();
+WinPrint.close();
+}
+
+</script>
+
 </body>
 
 </html>

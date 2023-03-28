@@ -58,7 +58,7 @@ if(isset($_POST['login']))
         <div class="container">
             <div class="login-box ptb--100">
                 <form action="#" method="post" name="login">
-                    <p style="font-size:16px; color:red" align="center"> <?php if($msg){
+                    <p style="font-size:16px; color:#ffd70d" align="center"> <?php if($msg){
     echo $msg;
   }  ?> </p>
                     <div class="login-form-head">
@@ -78,7 +78,7 @@ if(isset($_POST['login']))
                         </div>
                         <div class="row mb-4 rmber-area">
                             <div class="col-6">
-                                
+
                             </div>
                             <div class="col-6 text-right">
                                 <a href="forgot-password.php">Forgot Password?</a>
@@ -86,9 +86,9 @@ if(isset($_POST['login']))
                         </div>
                         <div class="submit-btn-area">
                             <button id="form_submit" type="submit" name="login">Submit <i class="ti-arrow-right"></i></button>
-                            
+
                         </div>
-                       
+
                     </div>
                 </form>
             </div>
@@ -105,7 +105,7 @@ if(isset($_POST['login']))
     <script src="assets/js/metisMenu.min.js"></script>
     <script src="assets/js/jquery.slimscroll.min.js"></script>
     <script src="assets/js/jquery.slicknav.min.js"></script>
-    
+
     <!-- others plugins -->
     <script src="assets/js/plugins.js"></script>
     <script src="assets/js/scripts.js"></script>

@@ -1,33 +1,12 @@
 <?php
 session_start();
-include('includes/dbconnection.php');
 error_reporting(0);
+include('includes/dbconnection.php');
 if (strlen($_SESSION['ptmsaid']==0)) {
   header('location:logout.php');
   } else{
-if(isset($_POST['submit']))
-  {
-    $noadult=$_POST['noadult'];
-    $nochildren=$_POST['nochildren'];
-    $aprice=$_POST['aprice'];
-    $cprice=$_POST['cprice'];
-    $ticketid=mt_rand(100000000, 999999999);
-   
-        $query=mysqli_query($con, "insert into  tblticindian(TicketID,NoAdult,NoChildren,AdultUnitprice,ChildUnitprice) value('$ticketid','$noadult','$nochildren','$aprice','$cprice')");
-    if ($query) {
-    
-     echo '<script>alert("Ticket information has been added.")</script>';
-  }
-  else
-    {
-       echo '<script>alert("Something Went Wrong. Please try again.")</script>';
-    }
 
-  
-}
-
-  
-  ?>
+?>
 
 <!doctype html>
 <html class="no-js" lang="en">
@@ -35,7 +14,7 @@ if(isset($_POST['submit']))
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Add Indian Ticket - Park Ticket Management System</title>
+    <title>Between Dates Report of Ticket Generating - Park Ticket Management System</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" type="image/png" href="assets/images/icon/favicon.ico">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -53,11 +32,11 @@ if(isset($_POST['submit']))
     <link rel="stylesheet" href="assets/css/responsive.css">
     <!-- modernizr css -->
     <script src="assets/js/vendor/modernizr-2.8.3.min.js"></script>
-    
+
 </head>
 
 <body>
-    
+
     <!-- page container area start -->
     <div class="page-container">
         <!-- sidebar menu area start -->
@@ -73,54 +52,35 @@ if(isset($_POST['submit']))
             <!-- page title area end -->
             <div class="main-content-inner">
                 <div class="row">
-          
+
                     <div class="col-lg-6 col-ml-12">
                         <div class="row">
                             <!-- basic form start -->
                             <div class="col-12 mt-5">
                                 <div class="card">
                                     <div class="card-body">
-                                        <h4 class="header-title">Add Ticket</h4>
+                                        <h4 class="header-title" style="color: #ffd70d">Between Dates Reports of Ticket Generating</h4>
 
 
-                                        <form method="post" action="" name="">
+                                        <form method="post" name="bwdatesreport" action="local-bwdates-reports-details.php">
                                              <div class="form-group">
-                                                <label for="exampleInputEmail1">Adult</label>
-                                                <input type="text" class="form-control" id="noadult" name="noadult" aria-describedby="emailHelp" placeholder="No. of Adult" value="" required="true">
-                                            </div>
+                                                <label>From Date</label>
+                                                <input type="date" id="fromdate" name="fromdate" value="" class="form-control" required="true"></div>
+
                                          <div class="form-group">
-                                                <label for="exampleInputEmail1">Children</label>
-                                                <input type="text" class="form-control" id="nochildren" name="nochildren" aria-describedby="emailHelp" placeholder="No. of Childrens" value="" required="true">
-                                                
+                                                <label>To Date</label>
+                                               <input type="date" id="todate" name="todate" value="" class="form-control" required="true">
+
                                             </div>
-                                            <?php
 
-$ret=mysqli_query($con,"select * from tbltickettype where TicketType='Normal Adult'");
-$cnt=1;
-while ($row=mysqli_fetch_array($ret)) {
-
-?>
-                                             <input type="hidden" name="aprice" value="<?php  echo $row['Price'];?>">
-                                             <?php } ?>
-
-                                             <?php
-
-$ret=mysqli_query($con,"select * from tbltickettype where TicketType='Normal Child'");
-$cnt=1;
-while ($row=mysqli_fetch_array($ret)) {
-
-?>
-                                            <input type="hidden" name="cprice" value="<?php  echo $row['Price'];?>">
-                                          
-                                      <?php } ?>
                                             <button type="submit" class="btn btn-primary mt-4 pr-4 pl-4" name="submit">Submit</button>
                                         </form>
                                     </div>
                                 </div>
                             </div>
                             <!-- basic form end -->
-                         
-                            
+
+
                         </div>
                     </div>
                 </div>
@@ -133,7 +93,7 @@ while ($row=mysqli_fetch_array($ret)) {
     </div>
     <!-- page container area end -->
     <!-- offset area start -->
-    
+
     <!-- jquery latest version -->
     <script src="assets/js/vendor/jquery-2.2.4.min.js"></script>
     <!-- bootstrap 4 js -->

@@ -7,7 +7,7 @@ if (strlen($_SESSION['ptmsaid']==0)) {
   } else{
 
 
-  
+
   ?>
 
 <!doctype html>
@@ -34,11 +34,11 @@ if (strlen($_SESSION['ptmsaid']==0)) {
     <link rel="stylesheet" href="assets/css/responsive.css">
     <!-- modernizr css -->
     <script src="assets/js/vendor/modernizr-2.8.3.min.js"></script>
-    
+
 </head>
 
 <body>
-    
+
     <!-- page container area start -->
     <div class="page-container">
         <!-- sidebar menu area start -->
@@ -54,7 +54,7 @@ if (strlen($_SESSION['ptmsaid']==0)) {
             <!-- page title area end -->
             <div class="main-content-inner">
                 <div class="row">
-        
+
                     <div class="col-lg-8 col-ml-12">
                         <div class="row">
                             <!-- basic form start -->
@@ -68,8 +68,8 @@ $cnt=1;
 while ($row=mysqli_fetch_array($ret)) {
 
 ?>
-                                        <h4 class="header-title" style="color: blue">View Detail of Ticket ID: <?php  echo $row['TicketID'];?></h4>
-                                        <h5 class="header-title" style="color: blue">Visiting Date: <?php  echo $row['PostingDate'];?></h5>
+                                        <h4 class="header-title" style="color: #ffd70d">View Detail of Ticket ID: <?php  echo $row['TicketID'];?></h4>
+                                        <h5 class="header-title" style="color: #ffd70d">Visiting Date: <?php  echo $row['PostingDate'];?></h5>
 
 
                                         <table border="1" class="table table-striped table-bordered first" >
@@ -91,9 +91,9 @@ while ($row=mysqli_fetch_array($ret)) {
                                     <td style="padding-left: 10px">$<?php  echo $aup=$row['ChildUnitprice'];?></td>
                                      <td style="padding-left: 10px">$<?php  echo $tc=$aup*$nochild;?></td>
                                 </tr>
-     
+
                                  <tr>
-                                    <th style="text-align: center;color: red;font-size: 20px" colspan="3">Total Ticket Price</th>
+                                    <th style="text-align: center;color: #ffd70d;font-size: 20px" colspan="3">Total Ticket Price</th>
                                     <td style="padding-left: 10px;">$<?php  echo ($ta+$tc);?></td>
                                 </tr>
                                 </table>
@@ -105,8 +105,8 @@ while ($row=mysqli_fetch_array($ret)) {
                                 </div>
                             </div>
                             <!-- basic form end -->
-                         
-                            
+
+
                         </div>
                     </div>
                 </div>
@@ -119,7 +119,7 @@ while ($row=mysqli_fetch_array($ret)) {
     </div>
     <!-- page container area end -->
     <!-- offset area start -->
-    
+
     <!-- jquery latest version -->
     <script src="assets/js/vendor/jquery-2.2.4.min.js"></script>
     <!-- bootstrap 4 js -->

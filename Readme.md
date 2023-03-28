@@ -1,0 +1,10 @@
+# Park Tickets management system
+
+## Members
+
+- NSABIMANA Issa 2210206034
+- NSENGIYUMVA Emmanuel 221008782
+- NYIRANSENGIMANA Antoinette 221013600
+- NYOMBAYIRE Assoumpta 221001653
+- TUYIZERE Rafiki 221016298
+- UWINEZA Evelyne 221020885

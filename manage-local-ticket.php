@@ -1,4 +1,4 @@
-<?php  
+<?php
 session_start();
 error_reporting(0);
 include('includes/dbconnection.php');
@@ -14,7 +14,7 @@ if (strlen($_SESSION['ptmsaid']==0)) {
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>View Ticket Generating Report - Park Ticket Management System</title>
+    <title>Manage Ticket - Park Ticket Management System</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" type="image/png" href="assets/images/icon/favicon.ico">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -40,7 +40,7 @@ if (strlen($_SESSION['ptmsaid']==0)) {
 </head>
 
 <body>
-    
+
     <!-- page container area start -->
     <div class="page-container">
         <!-- sidebar menu area start -->
@@ -60,15 +60,9 @@ if (strlen($_SESSION['ptmsaid']==0)) {
                     <div class="col-12 mt-5">
                         <div class="card">
                             <div class="card-body">
-                                <h4 class="header-title">Between Dates Reports</h4>
-                                <?php
-$fdate=$_POST['fromdate'];
-$tdate=$_POST['todate'];
-
-?>
-<h5 align="center" style="color:blue">Between Dates Report  from <?php echo $fdate?> to <?php echo $tdate?> of Ticket Generating</h5>
+                                <h4 class="header-title">View Detail of Tickets</h4>
                                 <div class="data-tables">
-                             <table class="table text-center">
+                <table class="table text-center">
                                         <thead class="bg-light text-capitalize">
                                             <tr>
                                                 <th>S.NO</th>
@@ -78,7 +72,7 @@ $tdate=$_POST['todate'];
                                             </tr>
                                         </thead>
                                         <?php
-$ret=mysqli_query($con,"select * from tblticindian where date(PostingDate) between '$fdate' and '$tdate'");
+$ret=mysqli_query($con,"select * from tblticlocal");
 $cnt=1;
 while ($row=mysqli_fetch_array($ret)) {
 
@@ -86,12 +80,12 @@ while ($row=mysqli_fetch_array($ret)) {
                                         <tbody>
           <tr data-expanded="true">
             <td><?php echo $cnt;?></td>
-              
+
                   <td><?php  echo $row['TicketID'];?></td>
                   <td><?php  echo $row['PostingDate'];?></td>
-                  <td><a href="view-normal-ticket.php?viewid=<?php echo $row['ID'];?>">View</a>
+                  <td><a href="view-local-ticket.php?viewid=<?php echo $row['ID'];?>">View</a>
                 </tr>
-                <?php 
+                <?php
 $cnt=$cnt+1;
 }?>
  </tbody>
@@ -101,8 +95,8 @@ $cnt=$cnt+1;
                         </div>
                     </div>
                     <!-- data table end -->
-                   
-                    
+
+
                 </div>
             </div>
         </div>
@@ -112,8 +106,8 @@ $cnt=$cnt+1;
         <!-- footer area end-->
     </div>
     <!-- page container area end -->
-    
-    
+
+
     <!-- jquery latest version -->
     <script src="assets/js/vendor/jquery-2.2.4.min.js"></script>
     <!-- bootstrap 4 js -->

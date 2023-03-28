@@ -5,7 +5,7 @@ include('includes/dbconnection.php');
 if (strlen($_SESSION['ptmsaid']==0)) {
   header('location:logout.php');
   } else{
-    
+
 ?>
 
 <!doctype html>
@@ -32,11 +32,11 @@ if (strlen($_SESSION['ptmsaid']==0)) {
     <link rel="stylesheet" href="assets/css/responsive.css">
     <!-- modernizr css -->
     <script src="assets/js/vendor/modernizr-2.8.3.min.js"></script>
-    
+
 </head>
 
 <body>
-    
+
     <!-- page container area start -->
     <div class="page-container">
         <!-- sidebar menu area start -->
@@ -57,28 +57,28 @@ if (strlen($_SESSION['ptmsaid']==0)) {
                             <!-- basic form start -->
                             <div class="col-12 mt-5">
                                 <div class="card">
-                                    <div class="card-body"> <h4 class="header-title" style="color: blue">Between Dates Reports of Ticket Generating</h4>
+                                    <div class="card-body"> <h4 class="header-title" style="color: #ffd70d">Between Dates Reports of Ticket Generating</h4>
 
 
                                         <form method="post" name="bwdatesreport" action="foreigner-bwdates-reports-details.php">
                                              <div class="form-group">
                                                 <label>From Date</label>
                                                 <input type="date" id="fromdate" name="fromdate" value="" class="form-control" required="true"></div>
-                                            
+
                                          <div class="form-group">
                                                 <label>To Date</label>
                                                <input type="date" id="todate" name="todate" value="" class="form-control" required="true">
-                                                
+
                                             </div>
-                                          
+
                                             <button type="submit" class="btn btn-primary mt-4 pr-4 pl-4" name="submit">Submit</button>
                                         </form>
                                     </div>
                                 </div>
                             </div>
                             <!-- basic form end -->
-                         
-                            
+
+
                         </div>
                     </div>
                 </div>
@@ -91,7 +91,7 @@ if (strlen($_SESSION['ptmsaid']==0)) {
     </div>
     <!-- page container area end -->
     <!-- offset area start -->
-    
+
     <!-- jquery latest version -->
     <script src="assets/js/vendor/jquery-2.2.4.min.js"></script>
     <!-- bootstrap 4 js -->

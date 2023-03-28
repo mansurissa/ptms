@@ -29,7 +29,7 @@
     <!-- page container area start -->
     <div class="page-container">
         <!-- sidebar menu area start -->
-     
+
         <!-- sidebar menu area end -->
         <!-- main content area start -->
         <div class="main-content">
@@ -49,12 +49,12 @@
                                     <div class="s-report-title d-flex justify-content-between">
                                         <?php
 //todays indian adult visitors
- $query=mysqli_query($con,"select sum(NoAdult) as totaladult from tblticindian where date(PostingDate)=CURDATE()");
+ $query=mysqli_query($con,"select sum(NoAdult) as totaladult from tblticlocal where date(PostingDate)=CURDATE()");
 $result=mysqli_fetch_array($query);
 $count_today_visitors=$result['totaladult'];
- ?>  
-                                        <h3 class="header-title mb-0">Today Normal Adult Visitor</h3>
-                                       <p style="font-size: 20px;color: red"><?php echo $count_today_visitors?></p>
+ ?>
+                                        <h3 class="header-title mb-0">Today Local Adult Visitor</h3>
+                                       <p style="font-size: 20px;color: #ffd70d"><?php echo $count_today_visitors?></p>
                                     </div>
                                 </div>
                                 <canvas id="coin_sales4" height="100"></canvas>
@@ -66,12 +66,12 @@ $count_today_visitors=$result['totaladult'];
                                     <div class="s-report-title d-flex justify-content-between">
                                         <?php
 //todays indian children visitors
- $query=mysqli_query($con,"select sum(NoChildren) as totalchild from tblticindian where date(PostingDate)=CURDATE()");
+ $query=mysqli_query($con,"select sum(NoChildren) as totalchild from tblticlocal where date(PostingDate)=CURDATE()");
 $result=mysqli_fetch_array($query);
 $count_today_cvisitors=$result['totalchild'];
- ?>  
-                                        <h4 class="header-title mb-0">Today Normal Children Visitor</h4>
-                                        <p style="font-size: 20px;color: red"><?php echo $count_today_cvisitors?></p>
+ ?>
+                                        <h4 class="header-title mb-0">Today Local Children Visitor</h4>
+                                        <p style="font-size: 20px;color: #ffd70d"><?php echo $count_today_cvisitors?></p>
                                     </div>
                                 </div>
                                 <canvas id="coin_sales5" height="100"></canvas>
@@ -83,12 +83,12 @@ $count_today_cvisitors=$result['totalchild'];
                                     <div class="s-report-title d-flex justify-content-between">
                                         <?php
 //Yesterday indian adult visitors
- $query=mysqli_query($con,"select sum(NoAdult) as totaladulty from tblticindian where date(PostingDate)=CURDATE()-1");
+ $query=mysqli_query($con,"select sum(NoAdult) as totaladulty from tblticlocal where date(PostingDate)=CURDATE()-1");
 $result=mysqli_fetch_array($query);
 $count_Yest_visitors=$result['totaladulty'];
  ?>
-                                        <h4 class="header-title mb-0">Yesterday Normal Adult Visitor</h4>
-                                        <p style="font-size: 20px;color: red"><?php echo $count_Yest_visitors?></p>
+                                        <h4 class="header-title mb-0">Yesterday Local Adult Visitor</h4>
+                                        <p style="font-size: 20px;color: #ffd70d"><?php echo $count_Yest_visitors?></p>
                                     </div>
                                 </div>
                                 <canvas id="coin_sales6" height="100"></canvas>
@@ -100,12 +100,12 @@ $count_Yest_visitors=$result['totaladulty'];
                                     <div class="s-report-title d-flex justify-content-between">
                                         <?php
 //Yesterday indian children visitors
- $query=mysqli_query($con,"select sum(NoChildren) as totalchildy from tblticindian where date(PostingDate)=CURDATE()-1");
+ $query=mysqli_query($con,"select sum(NoChildren) as totalchildy from tblticlocal where date(PostingDate)=CURDATE()-1");
 $result=mysqli_fetch_array($query);
 $count_Yest_cvisitors=$result['totalchildy'];
  ?>
-                                        <h4 class="header-title mb-0">Yesterday Normal Child Visitor</h4>
-                                        <p style="font-size: 20px;color: red"><?php echo $count_Yest_cvisitors?></p>
+                                        <h4 class="header-title mb-0">Yesterday Local Child Visitor</h4>
+                                        <p style="font-size: 20px;color: #ffd70d"><?php echo $count_Yest_cvisitors?></p>
                                     </div>
                                 </div>
                                 <canvas id="coin_sales7" height="100"></canvas>
@@ -124,9 +124,9 @@ $count_Yest_cvisitors=$result['totalchildy'];
  $query=mysqli_query($con,"select sum(NoAdult) as totaladult from tblticforeigner where date(PostingDate)=CURDATE()");
 $result=mysqli_fetch_array($query);
 $count_today_visitors=$result['totaladult'];
- ?>  
+ ?>
                                         <h3 class="header-title mb-0">Today Foreigner Adult Visitor</h3>
-                                       <p style="font-size: 20px;color: red"><?php echo $count_today_visitors?></p>
+                                       <p style="font-size: 20px;color: #ffd70d"><?php echo $count_today_visitors?></p>
                                     </div>
                                 </div>
                                 <canvas id="coin_sales4" height="100"></canvas>
@@ -141,9 +141,9 @@ $count_today_visitors=$result['totaladult'];
  $query=mysqli_query($con,"select sum(NoChildren) as totalchild from tblticforeigner where date(PostingDate)=CURDATE()");
 $result=mysqli_fetch_array($query);
 $count_today_cvisitors=$result['totalchild'];
- ?>  
+ ?>
                                         <h4 class="header-title mb-0">Today Foreigner Children Visitor</h4>
-                                        <p style="font-size: 20px;color: red"><?php echo $count_today_cvisitors?></p>
+                                        <p style="font-size: 20px;color: #ffd70d"><?php echo $count_today_cvisitors?></p>
                                     </div>
                                 </div>
                                 <canvas id="coin_sales5" height="100"></canvas>
@@ -160,7 +160,7 @@ $result=mysqli_fetch_array($query);
 $count_Yest_visitors=$result['totaladulty'];
  ?>
                                         <h4 class="header-title mb-0">Yesterday Foreigner Adult Visitor</h4>
-                                        <p style="font-size: 20px;color: red"><?php echo $count_Yest_visitors?></p>
+                                        <p style="font-size: 20px;color: #ffd70d"><?php echo $count_Yest_visitors?></p>
                                     </div>
                                 </div>
                                 <canvas id="coin_sales6" height="100"></canvas>
@@ -177,7 +177,7 @@ $result=mysqli_fetch_array($query);
 $count_Yest_cvisitors=$result['totalchildy'];
  ?>
                                         <h4 class="header-title mb-0">Yesterday Foreigner Child Visitor</h4>
-                                        <p style="font-size: 20px;color: red"><?php echo $count_Yest_cvisitors?></p>
+                                        <p style="font-size: 20px;color: #ffd70d"><?php echo $count_Yest_cvisitors?></p>
                                     </div>
                                 </div>
                                 <canvas id="coin_sales7" height="100"></canvas>
@@ -186,8 +186,8 @@ $count_Yest_cvisitors=$result['totalchildy'];
                     </div>
                 </div>
                 <!-- sales report area end -->
-             
-                
+
+
             </div>
 
         </div>
@@ -198,7 +198,7 @@ $count_Yest_cvisitors=$result['totalchildy'];
     </div>
     <!-- page container area end -->
     <!-- offset area start -->
- 
+
     <!-- offset area end -->
     <!-- jquery latest version -->
     <script src="assets/js/vendor/jquery-2.2.4.min.js"></script>

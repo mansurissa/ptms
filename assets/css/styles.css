@@ -108,7 +108,7 @@
   height: 100vh;
   width: 280px;
   overflow: hidden;
-  background: #303641;
+  background: #131519;
   box-shadow: 2px 0 32px rgba(0, 0, 0, 0.05);
   -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
@@ -138,7 +138,7 @@
 
 .sidebar-header {
   padding: 19px 32px 20px;
-  background: #303641;
+  background: #191c21;
   border-bottom: 1px solid #343e50;
 }
 .sidebar-menu .logo {
@@ -164,7 +164,7 @@
 }
 
 .metismenu li a i {
-  color: #1bd380;
+  color: #ffd70d;
   -webkit-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
 }
@@ -207,7 +207,7 @@
 .metismenu > li:hover > a,
 .metismenu > li.active > a {
   color: #fff;
-  background: #343942;
+  background: #23262c;
 }
 
 .metismenu li:hover > a,
@@ -264,7 +264,7 @@
 }
 
 .mainheader-area .logo a span {
-  color: #843df9;
+  color: #ffd70d;
 }
 
 .horizontal-menu {
@@ -286,7 +286,7 @@
 
 .horizontal-menu ul li:hover > a,
 .horizontal-menu ul li.active > a {
-  color: #007bff;
+  color: #ffd70d;
 }
 
 .horizontal-menu nav > ul > li:first-child > a {
@@ -306,7 +306,7 @@
   background: #fff;
   opacity: 0;
   visibility: hidden;
-  border-top: 4px solid #007bff;
+  border-top: 4px solid #ffd70d;
   border-radius: 3px;
   box-shadow: 0 2px 15px rgba(0, 0, 0, 0.03);
 }
@@ -342,7 +342,7 @@
 /* mobile menu */
 
 .slicknav_menu {
-  background: #8255f7;
+  background: #ffd70d;
   padding: 0;
   margin-top: 20px;
 }
@@ -375,7 +375,7 @@
 
 .slicknav_nav .slicknav_row:hover {
   border-radius: 0;
-  background: #8e66f7;
+  background: #ffd70d;
 }
 
 .slicknav_nav li i {
@@ -486,7 +486,7 @@
 }
 
 .notification-area li.settings-btn.active i {
-  color: #007bff;
+  color: #ffd70d;
 }
 
 .notification-area li > i {
@@ -678,7 +678,7 @@ ul.breadcrumbs {
   display: block;
   font-size: 14px;
   font-weight: 400;
-  color: #7801ff;
+  color: #ffd70d;
   letter-spacing: 0;
   margin-right: 16px;
   position: relative;
@@ -708,8 +708,8 @@ ul.breadcrumbs {
   align-items: center;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  background: -webkit-linear-gradient(left, #8914fe 0%, #8063f5 100%);
-  background: linear-gradient(to right, #8914fe 0%, #8063f5 100%);
+  background: -webkit-linear-gradient(left, #fec714 0%, #fac800 100%);
+  background: linear-gradient(to right, #fecf14 0%, #ffdd00 100%);
   padding: 17px 38px;
   position: relative;
 }
@@ -790,7 +790,7 @@ ul.breadcrumbs {
 
 .user-profile .dropdown-menu a:hover {
   background: #f8f9fa;
-  color: #2942fa;
+  color: #ffd70d;
 }
 
 /*-------------------- END Page Title Area -------------------*/
@@ -840,11 +840,12 @@ ul.breadcrumbs {
   font-size: 12px;
   font-weight: 700;
   color: #565656;
-  background: #ececec;
+  background: black;
   letter-spacing: 0;
   padding: 0 9px;
   height: 20px;
   line-height: 20px;
+  border-radius: 3px;
 }
 
 .single-report h2 {
@@ -993,7 +994,7 @@ table.dbkit-table tr td {
   font-size: 16px;
   font-weight: 700;
   color: #fff;
-  background: #ffd615;
+  background: #ffd70d;
   text-align: center;
   line-height: 30px;
   text-transform: uppercase;
@@ -1004,7 +1005,7 @@ table.dbkit-table tr td {
 }
 
 .cripto-live ul li .icon.d {
-  background: #4cff63;
+  background: #00eddd;
 }
 
 .cripto-live ul li .icon.e {
@@ -1027,7 +1028,7 @@ table.dbkit-table tr td {
 }
 
 .cripto-live ul li span i.fa-long-arrow-down {
-  color: #ff0e0e;
+  color: #b34747;
 }
 
 /*-------------------- END Live Crypto Price ------------------- */
@@ -1047,7 +1048,7 @@ table.dbkit-table tr td {
 
 .trd-history-tabs ul li a:hover,
 .trd-history-tabs ul li a.active {
-  border-bottom: 2px solid #731ffd;
+  border-bottom: 2px solid #ffd70d;
   padding-bottom: 7px;
   color: #565656;
 }
@@ -1095,7 +1096,7 @@ table.dbkit-table tr td {
 }
 
 .lts-content h2 a:hover {
-  color: #6d65dc;
+  color: #ffd70d;
 }
 
 .lts-content p {
@@ -1162,7 +1163,7 @@ table.dbkit-table tr td {
 }
 
 .exchange-btn button:hover {
-  background: #3c34ab;
+  background: #ffd70d;
 }
 
 .footer-area {
@@ -1217,7 +1218,7 @@ table.dbkit-table tr td {
 }
 
 .pagination_area ul li a:hover {
-  background: #8553fa;
+  background: #ffd70d;
   color: #fff;
 }
 
@@ -1426,7 +1427,7 @@ table.dbkit-table tr td {
 }
 
 .bg1 {
-  background: #5c6df4;
+  background: #ffd70d;
 }
 
 .bg2 {
@@ -1455,7 +1456,7 @@ table.dbkit-table tr td {
 
 .tm-title span.time i {
   margin-right: 5px;
-  color: #2c3cb7;
+  color: #ffd70d;
   font-size: 11px;
 }
 
@@ -1489,7 +1490,7 @@ table.dbkit-table tr td {
 .pulse {
   width: 10px;
   height: 10px;
-  border: 5px solid #f7f14c;
+  border: 5px solid #ffd70d;
   border-radius: 30px;
   background-color: #716f42;
   z-index: 10;
@@ -1497,7 +1498,7 @@ table.dbkit-table tr td {
 }
 
 .map-marker .dot {
-  border: 10px solid #fff601;
+  border: 10px solid #ffd70d;
   background: transparent;
   border-radius: 60px;
   height: 50px;
@@ -1705,8 +1706,8 @@ table.dbkit-table tr td {
 }
 
 .gradiant-bg .card-header a {
-  background-image: -webkit-linear-gradient(top left, #8914fe, #8160f6);
-  background-image: linear-gradient(to bottom right, #8914fe, #8160f6);
+  background-image: -webkit-linear-gradient(top left, #ffc400, #d29a00);
+  background-image: linear-gradient(to bottom right, #ffc400, #d29a00);
   color: #fff;
 }
 
@@ -1891,7 +1892,7 @@ p.card-text {
 /*-------------------- 16. Pagination ------------------- */
 
 .pg-color-border li a {
-  border-color: #007bff;
+  border-color: #ffd70d;
 }
 
 .pagination li a {
@@ -1996,7 +1997,7 @@ label {
 }
 
 .fw-icons a:hover {
-  color: #007bff;
+  color: #ffd70d;
 }
 
 .fw-icons a i {
@@ -2050,7 +2051,7 @@ label {
 }
 
 .icon-container:hover span {
-  color: #007bff;
+  color: #ffd70d;
 }
 
 /*-------------------- END Icons ------------------- */
@@ -2100,7 +2101,7 @@ div.dataTables_wrapper div.dataTables_length select {
 /* datatable-primary */
 
 .datatable-primary thead {
-  background: #4336fb;
+  background: #ffd70d;
   color: #fff;
 }
 
@@ -2126,20 +2127,20 @@ table.dataTable thead td {
 
 .datatable-primary .dataTables_paginate .page-item.active .page-link,
 .datatable-primary .dataTables_paginate .page-item .page-link:hover {
-  background-color: #4336fb;
-  border-color: #4336fb;
+  background-color: #ffd70d;
+  border-color: #ffd70d;
   color: #fff;
 }
 
 .datatable-primary .dataTables_paginate .page-link {
-  color: #4336fb;
-  border: 1px solid #4336fb;
+  color: #ffd70d;
+  border: 1px solid #ffd70d;
 }
 
 .datatable-primary .dataTables_paginate .paginate_button.disabled,
 .datatable-primary .dataTables_paginate .paginate_button.disabled:hover,
 .datatable-primary .dataTables_paginate .paginate_button.disabled:active {
-  color: #4336fb !important;
+  color: #ffd70d !important;
   border: none;
 }
 
@@ -2270,7 +2271,7 @@ table.dataTable thead td {
   display: inline-block;
   font-size: 15px;
   color: #fff;
-  background: #815ef6;
+  background: #ffd70d;
   padding: 12px 19px;
   border-radius: 3px;
   text-transform: capitalize;
@@ -2309,7 +2310,7 @@ table.dataTable thead td {
 
 .login-form-head {
   text-align: center;
-  background: #8655fc;
+  background: #ffd70d;
   padding: 50px;
 }
 
@@ -2347,7 +2348,7 @@ table.dataTable thead td {
 
 .form-gp.focused label {
   top: -15px;
-  color: #1bd380;
+  color: #ffd70d;
 }
 
 .form-gp input {
@@ -2377,7 +2378,7 @@ table.dataTable thead td {
   position: absolute;
   right: 5px;
   bottom: 15px;
-  color: #1bd380;
+  color: #ffd70d;
   font-size: 16px;
 }
 
@@ -2406,8 +2407,10 @@ table.dataTable thead td {
 }
 
 .submit-btn-area button:hover {
-  background: #2c71da;
+  background: #ffd70d;
   color: #ffffff;
+  font-weight: 600;
+  font-size: 14px;
 }
 
 .submit-btn-area button i {
@@ -2439,12 +2442,12 @@ table.dataTable thead td {
 }
 
 .login-other a.fb-login {
-  background: #1bd380;
+  background: #ffd70d;
   color: #fff;
 }
 
 .login-other a.fb-login:hover {
-  box-shadow: 0 5px 15px rgba(44, 113, 218, 0.38);
+  box-shadow: 0 5px 15px #ffd70d;
 }
 
 .login-other a.google-login {
@@ -2540,7 +2543,7 @@ table.dataTable thead td {
 }
 
 .prc-head h4 {
-  background: #1bd380;
+  background: #ffd70d;
   color: #fff;
   padding: 28px;
   letter-spacing: 0;
@@ -2568,14 +2571,14 @@ table.dataTable thead td {
 .prc-list > a {
   display: inline-block;
   margin-top: 40px;
-  background: #1bd380;
+  background: #ffd70d;
   color: #fff;
   padding: 11px 20px;
   border-radius: 40px;
 }
 
 .prc-list > a:hover {
-  box-shadow: 0 3px 25px rgba(44, 113, 218, 0.38);
+  box-shadow: 0 3px 25px #ffd70d;
 }
 
 .dark-pricing .prc-head h4 {
@@ -2611,11 +2614,11 @@ table.dataTable thead td {
 .error-content h2 {
   font-size: 98px;
   font-weight: 800;
-  color: #1bd380;
+  color: #ffd70d;
   margin-bottom: 28px;
   text-shadow: -3px -3px 0 #ffffff, 3px -3px 0 #ffffff, -3px 3px 0 #ffffff,
-    3px 3px 0 #ffffff, 4px 4px 0 #1bd380, 5px 5px 0 #1bd380, 6px 6px 0 #1bd380,
-    7px 7px 0 #1bd380;
+    3px 3px 0 #ffffff, 4px 4px 0 #ffd70d, 5px 5px 0 #ffd70d, 6px 6px 0 #ffd70d,
+    7px 7px 0 #ffd70d;
   font-family: 'lato', sans-serif;
 }
 
@@ -2625,14 +2628,14 @@ table.dataTable thead td {
 
 .error-content p {
   font-size: 17px;
-  color: #1bd380;
+  color: #ffd70d;
   font-weight: 600;
 }
 
 .error-content a {
   display: inline-block;
   margin-top: 40px;
-  background: #1bd380;
+  background: #ffd70d;
   color: #fff;
   padding: 16px 26px;
   border-radius: 3px;
@@ -2699,7 +2702,7 @@ table.dataTable thead td {
 }
 
 .offset-menu-tab li a.active {
-  color: #1bd380;
+  color: #ffd70d;
 }
 
 .offset-menu-tab li a:before {
@@ -2708,7 +2711,7 @@ table.dataTable thead td {
   bottom: 0;
   height: 5px;
   width: 100%;
-  background: #1bd380;
+  background: #ffd70d;
   border-radius: 30px;
   -webkit-transition: all 0.3s cubic-bezier(0.91, 0.31, 0.31, 0.92) 0s;
   transition: all 0.3s cubic-bezier(0.91, 0.31, 0.31, 0.92) 0s;
@@ -2777,7 +2780,7 @@ table.dataTable thead td {
 }
 
 .s-swtich input:checked + label {
-  background: #bada55;
+  background: #ffd70d;
 }
 
 .s-swtich input:checked + label:after {
@@ -2818,5 +2821,30 @@ table.dataTable thead td {
   font-size: 16px;
   color: #555;
 }
-
+.btn-primary {
+  background: #ffd70d !important;
+  border: 1px solid #ffd70d !important;
+  font-weight: 600;
+  font-size: 14px;
+}
+.page-item.active .page-link {
+  color: #fff;
+  background-color: #ffd70d;
+  border-color: #ffd70d;
+}
+a {
+  color: #ffd70d;
+}
+table.dataTable.dtr-inline.collapsed
+  > tbody
+  > tr[role='row']
+  > td:first-child:before {
+  background-color: #ffd70d;
+}
+table.dataTable thead .sorting:before {
+  display: none !important;
+}
+table.dataTable thead .sorting::after {
+  display: none !important;
+}
 /*-------------------- END Offset Sidebar ------------------- */

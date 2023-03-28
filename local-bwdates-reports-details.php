@@ -1,4 +1,4 @@
-<?php  
+<?php
 session_start();
 error_reporting(0);
 include('includes/dbconnection.php');
@@ -14,7 +14,7 @@ if (strlen($_SESSION['ptmsaid']==0)) {
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Search Indian Ticket - Park Ticket Management System</title>
+    <title>View Ticket Generating Report - Park Ticket Management System</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" type="image/png" href="assets/images/icon/favicon.ico">
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -40,7 +40,7 @@ if (strlen($_SESSION['ptmsaid']==0)) {
 </head>
 
 <body>
-    
+
     <!-- page container area start -->
     <div class="page-container">
         <!-- sidebar menu area start -->
@@ -60,23 +60,15 @@ if (strlen($_SESSION['ptmsaid']==0)) {
                     <div class="col-12 mt-5">
                         <div class="card">
                             <div class="card-body">
-                                <form id="basic-form" method="post">
-                                <div class="form-group">
-                                    <label>Search by Ticket ID</label>
-                                    <input id="searchdata" type="text" name="searchdata" required="true" class="form-control" placeholder="Ticket ID"></div>
-                                
-                                <br>
-                                <button type="submit" class="btn btn-primary" name="search" id="submit">Search</button>
-                            </form>  
-                            <?php
-if(isset($_POST['search']))
-{ 
+                                <h4 class="header-title">Between Dates Reports</h4>
+                                <?php
+$fdate=$_POST['fromdate'];
+$tdate=$_POST['todate'];
 
-$sdata=$_POST['searchdata'];
-  ?>
-  <h4 align="center">Result against "<?php echo $sdata;?>" keyword </h4>  
+?>
+<h5 align="center" style="color:black">Local tickets generated:  from <span style="color:#ffd70d"> <?php echo $fdate?> </span> to  <span style="color:#ffd70d"><?php echo $tdate?> </span></h5>
                                 <div class="data-tables">
-                                  <table class="table text-center">
+                             <table class="table text-center">
                                         <thead class="bg-light text-capitalize">
                                             <tr>
                                                 <th>S.NO</th>
@@ -86,9 +78,7 @@ $sdata=$_POST['searchdata'];
                                             </tr>
                                         </thead>
                                         <?php
-$ret=mysqli_query($con,"select * from tblticindian  where TicketID like '$sdata%'");
-$num=mysqli_num_rows($ret);
-if($num>0){
+$ret=mysqli_query($con,"select * from tblticlocal where date(PostingDate) between '$fdate' and '$tdate'");
 $cnt=1;
 while ($row=mysqli_fetch_array($ret)) {
 
@@ -96,20 +86,14 @@ while ($row=mysqli_fetch_array($ret)) {
                                         <tbody>
           <tr data-expanded="true">
             <td><?php echo $cnt;?></td>
-              
+
                   <td><?php  echo $row['TicketID'];?></td>
                   <td><?php  echo $row['PostingDate'];?></td>
-                  <td><a href="view-normal-ticket.php?viewid=<?php echo $row['ID'];?>">View</a>
+                  <td><a href="view-local-ticket.php?viewid=<?php echo $row['ID'];?>">View</a>
                 </tr>
-                 <?php 
-$cnt=$cnt+1;} } else { ?>
-  <tr>
-    <td colspan="8"> No record found against this search</td>
-
-  </tr>
-   
-
-<?php }} ?>
+                <?php
+$cnt=$cnt+1;
+}?>
  </tbody>
                                     </table>
                                 </div>
@@ -117,8 +101,8 @@ $cnt=$cnt+1;} } else { ?>
                         </div>
                     </div>
                     <!-- data table end -->
-                   
-                    
+
+
                 </div>
             </div>
         </div>
@@ -128,8 +112,8 @@ $cnt=$cnt+1;} } else { ?>
         <!-- footer area end-->
     </div>
     <!-- page container area end -->
-    
-    
+
+
     <!-- jquery latest version -->
     <script src="assets/js/vendor/jquery-2.2.4.min.js"></script>
     <!-- bootstrap 4 js -->
