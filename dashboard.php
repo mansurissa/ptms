@@ -48,7 +48,7 @@
                                 <div class="s-sale-inner pt--30 mb-3">
                                     <div class="s-report-title d-flex justify-content-between">
                                         <?php
-//todays indian adult visitors
+//todays Local adult visitors
  $query=mysqli_query($con,"select sum(NoAdult) as totaladult from tblticlocal where date(PostingDate)=CURDATE()");
 $result=mysqli_fetch_array($query);
 $count_today_visitors=$result['totaladult'];
@@ -65,7 +65,7 @@ $count_today_visitors=$result['totaladult'];
                                 <div class="s-sale-inner pt--30 mb-3">
                                     <div class="s-report-title d-flex justify-content-between">
                                         <?php
-//todays indian children visitors
+//todays Local children visitors
  $query=mysqli_query($con,"select sum(NoChildren) as totalchild from tblticlocal where date(PostingDate)=CURDATE()");
 $result=mysqli_fetch_array($query);
 $count_today_cvisitors=$result['totalchild'];
@@ -82,7 +82,7 @@ $count_today_cvisitors=$result['totalchild'];
                                 <div class="s-sale-inner pt--30 mb-3">
                                     <div class="s-report-title d-flex justify-content-between">
                                         <?php
-//Yesterday indian adult visitors
+//Yesterday Local adult visitors
  $query=mysqli_query($con,"select sum(NoAdult) as totaladulty from tblticlocal where date(PostingDate)=CURDATE()-1");
 $result=mysqli_fetch_array($query);
 $count_Yest_visitors=$result['totaladulty'];
@@ -99,7 +99,7 @@ $count_Yest_visitors=$result['totaladulty'];
                                 <div class="s-sale-inner pt--30 mb-3">
                                     <div class="s-report-title d-flex justify-content-between">
                                         <?php
-//Yesterday indian children visitors
+//Yesterday Local children visitors
  $query=mysqli_query($con,"select sum(NoChildren) as totalchildy from tblticlocal where date(PostingDate)=CURDATE()-1");
 $result=mysqli_fetch_array($query);
 $count_Yest_cvisitors=$result['totalchildy'];

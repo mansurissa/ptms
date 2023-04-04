@@ -66,7 +66,7 @@ $fdate=$_POST['fromdate'];
 $tdate=$_POST['todate'];
 
 ?>
-<h5 align="center" style="color:black">Foreigners ickets generated:  from <span style="color:#ffd70d"> <?php echo $fdate?> </span> to  <span style="color:#ffd70d"><?php echo $tdate?> </span></h5>
+<h5 align="center" style="color:black">Foreigners tickets generated:  from <span style="color:#ffd70d"> <?php echo $fdate?> </span> to  <span style="color:#ffd70d"><?php echo $tdate?> </span></h5>
                                 <div class="data-tables">
                                    <table class="table text-center">
                                         <thead class="bg-light text-capitalize">
